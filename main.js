@@ -26,6 +26,7 @@ for (var i = 0; i < squares.length; i++) {
     // compare color to pickedColor
     if (clickedColor === pickedColor) {
       messageDisplay.textContent = 'Correct';
+      resetButton.textContent = 'Play Again?';
       changeColors(clickedColor);
       h1.style.backgroundColor = clickedColor;
     } else {
@@ -62,4 +63,3 @@ function randomColor() {
   var b = Math.floor(Math.random() * 256);
   return 'rgb(' + r + ', ' + g + ', ' + b + ')';
 }
-
