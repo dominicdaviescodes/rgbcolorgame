@@ -11,7 +11,7 @@ var colors = [
 
 var squares = document.querySelectorAll('.square');
 // the goal color
-var pickedColor = colors[3];
+var pickedColor = pickColor();
 // color displayed in h1 tag
 var colorDisplay = document.getElementById('colorDisplay');
 colorDisplay.textContent = pickedColor;
@@ -42,4 +42,9 @@ function changeColors(color) {
     // change each square's color to match winning color
     squares[i].style.backgroundColor = color;
   }
+}
+
+function pickColor() {
+  var random = Math.floor(Math.random() * colors.length);
+  return colors[random];
 }
